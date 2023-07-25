@@ -186,12 +186,6 @@ class MainActivity : MVVMActivity<ActivityMainBinding, BaseViewModel>() {
                             var p: Process? = null
                             try {
                                 p = Runtime.getRuntime().exec("su && pm install -r /storage/sdcard0/Download/app-debug.apk")
-                                //registerReceiver()
-                                /*val outs = DataOutputStream(p.outputStream)
-                                val cmd = "pm install -r /storage/sdcard0/Download/app-debug.apk &&" +
-                                        " sleep 15 &&" +
-                                        " am start -S com.zol.updater/com.zol.updater.activities.MainActivity"
-                                outs.writeBytes(cmd+"\n")*/
                             } catch (e: IOException) {
                                 Timber.e(e.message)
                             }
